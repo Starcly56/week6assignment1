@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.ujjwal.softuserreplica.adapter.ViewPagerAdapter
+import com.ujjwal.softuserreplica.`object`.student
 import com.ujjwal.softuserreplica.fragments.AboutUsFragment
 import com.ujjwal.softuserreplica.fragments.AddStudentFragment
 import com.ujjwal.softuserreplica.fragments.HomeFragment
@@ -22,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val firstFragment=HomeFragment()
         val secondFragment=AddStudentFragment()
         val thirdFragment=AboutUsFragment()
+        student.addStudent()
         setCurrentFragment(firstFragment)
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
@@ -64,14 +64,4 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-//    private fun populateList(){
-//        listTitle = ArrayList()
-//        listTitle.add("Home")
-//        listTitle.add("Add Student")
-//        listTitle.add("About Us")
-//        listFragments= ArrayList()
-//        listFragments.add(HomeFragment())
-//        listFragments.add(AddStudentFragment())
-//        listFragments.add(AboutUsFragment())
-//    }
 }
