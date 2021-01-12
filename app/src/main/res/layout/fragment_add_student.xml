@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:id="@+id/addStudentFragment"
+        tools:context=".fragments.AddStudentFragment">
+
+        <!--    Heading-->
+        <TextView
+            android:id="@+id/tvHeading"
+            style="@style/labelLayout"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Student Registration Form"
+            />
+        <!--    Full Name-->
+        <TextView
+            android:id="@+id/tvFullName"
+            style="@style/labelLayout"
+            android:text="Full Name" />
+
+        <EditText
+            android:id="@+id/etFullName"
+            style="@style/valueLayout"
+            android:hint="Enter Full Name"
+            android:inputType="textPersonName" />
+        <!--    Email-->
+        <TextView
+            android:id="@+id/tvAge"
+            style="@style/labelLayout"
+            android:text="Age" />
+
+        <EditText
+            android:id="@+id/etAge"
+            style="@style/valueLayout"
+            android:hint="Enter Age"
+            android:inputType="number" />
+        <!--    Gender-->
+        <TextView
+            android:id="@+id/tvGender"
+            style="@style/labelLayout"
+            android:text="Gender" />
+
+        <RadioGroup
+            android:id="@+id/rdoGenderGroup"
+            style="@style/valueLayout"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdoMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rdoFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female" />
+            <RadioButton
+                android:id="@+id/rdoOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Others" />
+        </RadioGroup>
+        <!--    Address-->
+        <TextView
+            android:id="@+id/tvAddress"
+            style="@style/labelLayout"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            style="@style/valueLayout"
+            android:hint="Enter Address"
+            android:inputType="text" />
+        <!--    Mobile Number-->
+        <TextView
+            android:id="@+id/tvMobile"
+            style="@style/labelLayout"
+            android:text="Mobile Number" />
+
+        <EditText
+            android:id="@+id/etMobile"
+            style="@style/valueLayout"
+            android:hint="Enter Mobile Number"
+            android:inputType="phone" />
+        <!--    Register Button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:background="@drawable/button_round_corners"
+            style="@style/labelLayout"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Register" />
+    </LinearLayout>
